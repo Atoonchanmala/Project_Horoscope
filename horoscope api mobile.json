@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "d3cb965c-85bf-47fe-87c2-7513edcc6846",
+		"name": "mea mor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26775544",
+		"_collection_link": "https://laoitdev-x.postman.co/workspace/jdbyes~0671b37c-25f1-4045-8767-d8b67272116f/collection/26775544-d3cb965c-85bf-47fe-87c2-7513edcc6846?action=share&source=collection_link&creator=26775544"
+	},
+	"item": [
+		{
+			"name": "BO",
+			"item": [
+				{
+					"name": "New Request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://mftxsldrfwznhcdyeuee.supabase.co/function/v1/horoscope",
+							"protocol": "https",
+							"host": [
+								"mftxsldrfwznhcdyeuee",
+								"supabase",
+								"co"
+							],
+							"path": [
+								"function",
+								"v1",
+								"horoscope"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "generate horoscope",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\":\"2058333487\",\n    \"dob\":\"\", // YYYY-MM-DD\n    \"gender\":\"M\", // M or F\n    \"package\":\"\"// DAY, WEEK, MONTH\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mftxsldrfwznhcdyeuee.supabase.co/function/v1/horoscope",
+					"protocol": "https",
+					"host": [
+						"mftxsldrfwznhcdyeuee",
+						"supabase",
+						"co"
+					],
+					"path": [
+						"function",
+						"v1",
+						"horoscope"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\":\"2058333487\",\n    \"dob\":\"\", // YYYY-MM-DD\n    \"gender\":\"M\", // M or F\n    \"package\":\"\"// DAY, WEEK, MONTH\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://mftxsldrfwznhcdyeuee.supabase.co/function/v1/horoscope",
+							"protocol": "https",
+							"host": [
+								"mftxsldrfwznhcdyeuee",
+								"supabase",
+								"co"
+							],
+							"path": [
+								"function",
+								"v1",
+								"horoscope"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\n    \"horoscope\":[\n{\n    \"content\":\"\",\n    \"title\":\"\"\n}\n    ]\n    \n\n}"
+				}
+			]
+		},
+		{
+			"name": "get horoscope",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\":\"2058333487\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mftxsldrfwznhcdyeuee.supabase.co/function/v1/horoscope",
+					"protocol": "https",
+					"host": [
+						"mftxsldrfwznhcdyeuee",
+						"supabase",
+						"co"
+					],
+					"path": [
+						"function",
+						"v1",
+						"horoscope"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\":\"2058333487\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://mftxsldrfwznhcdyeuee.supabase.co/function/v1/horoscope",
+							"protocol": "https",
+							"host": [
+								"mftxsldrfwznhcdyeuee",
+								"supabase",
+								"co"
+							],
+							"path": [
+								"function",
+								"v1",
+								"horoscope"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\n    \"horoscope\": [\n        {\n            \"content\": \"\",\n            \"category\": \"\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "getUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\":\"2058333487\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mftxsldrfwznhcdyeuee.supabase.co/function/v1/user",
+					"protocol": "https",
+					"host": [
+						"mftxsldrfwznhcdyeuee",
+						"supabase",
+						"co"
+					],
+					"path": [
+						"function",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getUser",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://mftxsldrfwznhcdyeuee.supabase.co/function/v1/user",
+							"protocol": "https",
+							"host": [
+								"mftxsldrfwznhcdyeuee",
+								"supabase",
+								"co"
+							],
+							"path": [
+								"function",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\n    \"phone\":\"\",\n    \"package\":\"\",\n    \"lastHoroscrope\":\"\"\n}"
+				}
+			]
+		}
+	]
+}
